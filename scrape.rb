@@ -14,7 +14,8 @@ input = ARGV.shift
 people = {}
 
 html = parse(input)
-while not html.nil? do
+pages = 0
+while not html.nil? and pages < 10 do
   # Get list of authors on this page
   html.css("span.author").each do |vcard|
     begin
@@ -50,6 +51,8 @@ while not html.nil? do
   rescue
     html = nil
   end
+  
+  pages += 1
 end
 
 puts people.to_yaml
