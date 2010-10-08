@@ -1,0 +1,49 @@
+body {
+	background: #def;
+	font-family: sans-serif;
+}
+
+div#Frame {
+	margin: 1em auto;
+	text-align: left;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	float: left;
+	padding-right: 0.5em;
+}
+
+li {
+	height: 48px;
+	width: 200px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-webkit-box-shadow: #333 1px 1px 5px;
+	-moz-box-shadow: #333 1px 1px 5px;
+	background-color: #ffffff;
+	padding: 4px 16px;
+	margin: 5px 5px;
+	float: left;
+}
+
+a {
+	text-decoration:none;
+	color: #446;
+	height: 48px;
+}
+
+span {
+	display: block;
+}
+
+span.name {
+	font-size: 18px;
+}
+
+span.nickname {
+	font-size: 12px;
+}
