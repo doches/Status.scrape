@@ -1,3 +1,6 @@
+# Scrape the public timeline for users
+# Usage: ruby #{__FILE__} url_to_public_timeline > users.yaml
+
 require 'nokogiri'
 require 'open-uri'
 
@@ -6,9 +9,11 @@ def parse(url)
   return Nokogiri::HTML(open(url))
 end
 
+input = ARGV.shift
+
 people = {}
 
-html = parse("http://demeter.inf.ed.ac.uk/statusnet/index.php/")
+html = parse(input)
 while not html.nil? do
   # Get list of authors on this page
   html.css("span.author").each do |vcard|

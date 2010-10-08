@@ -39,6 +39,7 @@ end
 # End with a glorious HTML5 footer
 puts <<HTM
   </ul>
+  <div class="footer">Generated on #{Time.now.to_s}</div>
 </div> 
 </body> 
 </html>
